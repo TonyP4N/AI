@@ -1,6 +1,5 @@
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 import cv2
-import numpy as np
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 def dist_thresholding(des1, des2, threshold_value) -> list:
@@ -14,6 +13,7 @@ def dist_thresholding(des1, des2, threshold_value) -> list:
             if each.distance < threshold_value:
                 temp.append(each)
         matchesRes.append(temp)
+
     return matchesRes
 
 def nn(des1, des2, threshold_value) -> list:
@@ -45,6 +45,7 @@ def nndr(des1, des2, threshold_value) -> list:
         if m[0].distance < threshold_value * m[1].distance:
             temp.append(m[0])
         matchesRes.append(temp)
+
     return matchesRes
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
