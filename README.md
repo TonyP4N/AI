@@ -1,2 +1,2 @@
-# Othrllo Game
+# Othello Game
 AI Autofire
